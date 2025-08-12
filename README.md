@@ -52,7 +52,7 @@ This is a clean and responsive personal portfolio website built to showcase my s
 
 You can view the live version of this portfolio website here:
 
-**[Ayush_Kumar_Gupta.netlify.app](https://www.google.com/search?q=https://your-netlify-url.netlify.app)**
+**[Ayush_Kumar_Gupta.netlify.app](https://ayux9h.netlify.app/)**
 
 -----
 
