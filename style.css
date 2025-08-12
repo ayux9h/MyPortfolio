@@ -1,0 +1,310 @@
+/* --- Global Styling --- */
+:root {
+    --primary-color: #00ffc4; /* Vibrant green accent */
+    --secondary-color: #121212; /* Dark background */
+    --card-color: #1e1e1e; /* Slightly lighter dark for cards */
+    --text-color: #f0f0f0; /* Light text for readability */
+    --text-muted: #a0a0a0; /* Muted text for descriptions */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+/* --- Header & Navigation --- */
+.header {
+    background-color: var(--secondary-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 2.5rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: 6rem auto;
+    padding: 2rem;
+    gap: 4rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.intro-greeting {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.intro-headline {
+    font-size: 4rem;
+    margin: 0.5rem 0 1rem;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    max-width: 600px;
+    color: var(--text-muted);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.85rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 2rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: translateY(-10px);
+}
+
+/* --- General Section Styling --- */
+section {
+    max-width: 1100px;
+    margin: 6rem auto;
+    padding: 2rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+}
+
+/* Underline effect for section titles */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 1rem auto 0;
+}
+
+/* --- Skills Section --- */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background-color: var(--card-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-name {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.skill-bar {
+    background-color: #333;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    width: 0;
+    transition: width 2s ease-out;
+}
+
+.skill-level.java { width: 90%; }
+.skill-level.html-css { width: 70%; }
+.skill-level.javascript { width: 60%; }
+.skill-level.python { width: 80%; }
+.skill-level.mysql { width: 80%; }
+
+@keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--initial-width); }
+}
+
+/* --- Projects Section --- */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--text-muted);
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section p {
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact-button {
+    background-color: var(--card-color);
+    color: var(--text-color);
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-5px);
+    background-color: #333;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card-color);
+    color: var(--text-muted);
+    margin-top: 6rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        margin: 4rem auto;
+    }
+    .hero-image {
+        margin-top: 2rem;
+    }
+    .hero-content {
+        order: 2;
+    }
+    .hero-image {
+        order: 1;
+    }
+    .nav-links {
+        display: none;
+    }
+    nav {
+        flex-direction: column;
+    }
+}
